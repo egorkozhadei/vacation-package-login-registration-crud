@@ -1,5 +1,5 @@
-# vacation-package-login-registration-crud
-Vacation Package CRUD with login and registration (.NET Core 3.0 + Angular).
+# .NET Core 3.0 + Angular Login, Registration and CRUD
+Vacation Package application with CRUD, login and registration (.NET Core 3.0 + Angular).
 
 First run WebAPI project in VS and WebClient in VS Code.
 Run Update-Database command in Nuget Package Manager to create a new database and seed it with default records.
