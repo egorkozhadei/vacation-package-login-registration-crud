@@ -1,0 +1,8 @@
+<table class="table table-hover">
+  <tr *ngFor="let vp of service.vacationPackagesList">
+    <td>{{ vp.name }}</td>
+    <td>{{ vp.price }}</td>
+    <td><i class="fas fa-edit fa-lg text-success" (click)="editVacationPackage(vp)"></i></td>
+    <td><i class="far fa-trash-alt fa-lg text-danger" (click)="deleteVacationPackage(vp.id)"></i></td>
+  </tr>
+</table>

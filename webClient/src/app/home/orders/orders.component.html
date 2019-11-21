@@ -1,0 +1,13 @@
+<table class="table table-hover">
+    <tr *ngFor="let o of service.ordersList">
+      <td>{{ o.id }}</td>
+      <td>{{ o.price }}</td>
+      <td>{{ o.vacationPackage.id }}</td>
+      <td>{{ o.customer.id }}</td>
+      <td>{{ o.manager.id }}</td>
+      <td>{{ o.creationDateTime }}</td>
+      <td>{{ o.completedDateTime }}</td>
+      <td><i class="fas fa-edit fa-lg text-success" (click)="editOrder(o)"></i></td>
+      <td><i class="far fa-trash-alt fa-lg text-danger" (click)="deleteOrder(o.id)"></i></td>
+    </tr>
+  </table>

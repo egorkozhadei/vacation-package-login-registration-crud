@@ -1,0 +1,69 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="Id" [value]="service.formData.id">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+              <i class="fas fa-dollar-sign"></i>
+          </div>
+        </div>
+        <input type="number" name="Price" #Price="ngModel" [(ngModel)]="service.formData.price" placeholder="Price" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-signature"></i>
+            </div>
+          </div>
+          <input type="number" name="VacationPackage" #VacationPackage="ngModel" [(ngModel)]="service.formData.vacationPackageId" placeholder="VacationPackage" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-white">
+                  <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <input type="number" name="Customer" #Customer="ngModel" [(ngModel)]="service.formData.customerId" placeholder="Customer" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user-tag"></i>
+                </div>
+              </div>
+              <input type="number" name="Manager" #Manager="ngModel" [(ngModel)]="service.formData.managerId" placeholder="Manager" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text bg-white">
+                      <i class="fas fa-hourglass-start"></i>
+                  </div>
+                </div>
+                <input name="CreationDateTime" #CreationDateTime="ngModel" [(ngModel)]="service.formData.creationDateTime" placeholder="CreationDateTime" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-hourglass-end"></i>
+                    </div>
+                  </div>
+                  <input name="CompletedDateTime" #CompletedDateTime="ngModel" [(ngModel)]="service.formData.completedDateTime" placeholder="CompletedDateTime" class="form-control" required>
+                </div>
+              </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]=form.invalid>
+          <i class="fas fa-database"></i>
+          Submit
+        </button>
+      </div>
+  </form>

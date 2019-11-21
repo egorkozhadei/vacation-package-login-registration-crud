@@ -1,0 +1,9 @@
+<table class="table table-hover">
+  <tr *ngFor="let c of service.customersList">
+    <td>{{ c.fullName }}</td>
+    <td>{{ c.phoneNumber }}</td>
+    <td>{{ c.email }}</td>
+    <td><i class="fas fa-user-edit fa-lg text-success" (click)="editCustomer(c)"></i></td>
+    <td><i class="far fa-trash-alt fa-lg text-danger" (click)="deleteCustomer(c.id)"></i></td>
+  </tr>
+</table>
